@@ -1,1 +1,21 @@
 # Algorithms-1
+Welcome!
+
+## KMP 
+The Knuth-Morris-Pratt (KMP) algorithm is a string matching algorithm that is used to find the occurrence of a pattern within a larger string. The algorithm uses a preprocessing step to construct a "failure function" that helps it quickly skip over portions of the larger string that do not match the pattern, allowing it to find the pattern in linear time.
+
+### The KMP algorithm works as follows:
+
+Preprocess the pattern by constructing a "failure function" that stores the length of the longest proper prefix of the pattern that is also a suffix of the pattern. This function is used to quickly skip over portions of the larger string that do not match the pattern.
+
+Initialize a pointer i to the start of the larger string and a pointer j to the start of the pattern.
+
+Compare the character at the ith position of the larger string with the jth character of the pattern. If they match, increment both i and j and continue to the next characters. If they do not match, use the failure function to determine how much of the pattern to skip and then continue the comparison with the next character in the larger string.
+
+Repeat step 3 until either the pattern is found (j equals the length of the pattern) or the end of the larger string is reached (i equals the length of the larger string).
+
+If the pattern was found, return the position at which it was found. If the end of the larger string was reached, return -1 to indicate that the pattern was not found.
+
+### The KMP algorithm has a time complexity of O(m+n), where m is the length of the pattern and n is the length of the larger string, making it much faster than naive string matching algorithms that have a time complexity of O(m*n).
+
+I hope this helps! Let me know if you have any other questions.
