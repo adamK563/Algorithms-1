@@ -31,4 +31,11 @@ Combine the solutions to the subproblems to solve the original problem. This typ
 
 ### One of the key advantages of the divide and conquer paradigm is that it allows for parallelization, as the subproblems can be solved independently and then combined to solve the original problem. This can make divide and conquer algorithms much faster than other algorithms on parallel hardware.
 
+## 3. Greedy algorithm
+A greedy algorithm is an algorithm that follows the principle of making the locally optimal choice at each stage with the hope of finding a global optimum. In other words, a greedy algorithm makes the best choice it can at each step, without worrying about the consequences for future steps.
+
+The greedy approach is often used to solve optimization problems, where the goal is to find the best possible solution to a problem given a set of constraints. To do this, a greedy algorithm will iteratively make the locally optimal choice, with the hope that these choices will lead to a globally optimal solution.
+
+### One of the key advantages of greedy algorithms is their simplicity. They are easy to understand and implement, and they often have good performance in practice. However, they are not always guaranteed to find the optimal solution, as they can be susceptible to "getting stuck" in locally optimal solutions that are not globally optimal.
+
 I hope this helps! Let me know if you have any other questions.
