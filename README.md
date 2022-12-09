@@ -1,7 +1,7 @@
 # Algorithms-1
 Welcome!
 
-## KMP 
+## 1. KMP 
 The Knuth-Morris-Pratt (KMP) algorithm is a string matching algorithm that is used to find the occurrence of a pattern within a larger string. The algorithm uses a preprocessing step to construct a "failure function" that helps it quickly skip over portions of the larger string that do not match the pattern, allowing it to find the pattern in linear time.
 
 ### The KMP algorithm works as follows:
@@ -18,7 +18,7 @@ If the pattern was found, return the position at which it was found. If the end 
 
 ### The KMP algorithm has a time complexity of O(m+n), where m is the length of the pattern and n is the length of the larger string, making it much faster than naive string matching algorithms that have a time complexity of O(m*n).
 
-## Divide and conquer
+## 2. Divide and conquer
 Divide and conquer is an algorithm design paradigm that involves dividing a problem into smaller subproblems, solving the subproblems recursively, and then combining the solutions to the subproblems to solve the original problem. This approach can be used to solve a wide variety of problems, from sorting and searching to optimization and graph algorithms.
 
 ### The divide and conquer paradigm has several key steps:
