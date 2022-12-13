@@ -48,13 +48,13 @@ The pi list is used in the KMP algorithm to quickly skip over sections of the te
 
 A suffix tree is a data structure that can be used to store all the suffixes of a given string. It allows for efficient searching of substrings within the string, and can be built by following these steps:
 
-Start with an empty tree and the full string as the input.
-Identify the longest prefix of the input string that matches a substring already in the tree. This prefix is called the "active edge".
-If the active edge is not a leaf node in the tree, go to the next character in the input string and repeat step 2.
-If the active edge is a leaf node, create a new edge from the parent node to the next character in the input string, and set the active edge to this new edge.
-If there is no active edge in the tree that matches the next character in the input string, create a new edge from the root node to this character, and set the active edge to this new edge.
-Repeat steps 2-5 until all the suffixes of the input string have been added to the tree.
-Once the suffix tree has been built, it can be used to quickly search for substrings within the input string.
+1. Start with an empty tree and the full string as the input.
+2. Identify the longest prefix of the input string that matches a substring already in the tree. This prefix is called the "active edge".
+3. If the active edge is not a leaf node in the tree, go to the next character in the input string and repeat step 2.
+4. If the active edge is a leaf node, create a new edge from the parent node to the next character in the input string, and set the active edge to this new edge.
+5. If there is no active edge in the tree that matches the next character in the input string, create a new edge from the root node to this character, and set the active edge to this new edge.
+6. Repeat steps 2-5 until all the suffixes of the input string have been added to the tree.
+7. Once the suffix tree has been built, it can be used to quickly search for substrings within the input string.
 
 ## 2. Divide and conquer
 Divide and conquer is an algorithm design paradigm that involves dividing a problem into smaller subproblems, solving the subproblems recursively, and then combining the solutions to the subproblems to solve the original problem. This approach can be used to solve a wide variety of problems, from sorting and searching to optimization and graph algorithms.
@@ -78,13 +78,13 @@ The greedy approach is often used to solve optimization problems, where the goal
 
 Huffman coding is a lossless data compression algorithm that assigns variable-length codes to characters in a string, such that the characters with higher frequencies are assigned shorter codes and the characters with lower frequencies are assigned longer codes. This allows for efficient storage and transmission of the string, as the codes can be used to represent the original string using fewer bits than the original representation.
 
-To encode a string using Huffman coding, follow these steps:
+### To encode a string using Huffman coding, follow these steps:
 
-Create a frequency table for the characters in the string, which lists the frequency of each character in the string.
-Create a binary tree for the characters in the string, where the root node is the character with the highest frequency, and the children of each node are the next two highest-frequency characters.
-Traverse the binary tree, starting from the root node, and assign a 0 to each left child and a 1 to each right child.
-Use the resulting code for each character to encode the string, by replacing each character in the string with its code.
-To decode a Huffman-encoded string, follow these steps:
+1. Create a frequency table for the characters in the string, which lists the frequency of each character in the string.
+2. Create a binary tree for the characters in the string, where the root node is the character with the highest frequency, and the children of each node are the next two highest-frequency characters.
+3. Traverse the binary tree, starting from the root node, and assign a 0 to each left child and a 1 to each right child.
+4. Use the resulting code for each character to encode the string, by replacing each character in the string with its code.
+5. To decode a Huffman-encoded string, follow these steps:
 
 Create a binary tree for the codes in the encoded string, using the same process as in step 2 of the encoding process.
 Traverse the binary tree, starting from the root node, and use the sequence of 0s and 1s in the encoded string to navigate to the leaf nodes of the tree.
