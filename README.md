@@ -28,6 +28,34 @@ If the pattern was found, return the position at which it was found. If the end 
 
 ### The KMP algorithm has a time complexity of O(m+n), where m is the length of the pattern and n is the length of the larger string, making it much faster than naive string matching algorithms that have a time complexity of O(m*n).
 
+In the Knuth-Morris-Pratt (KMP) algorithm, the prefix of a string is a substring that occurs at the beginning of the string, while the suffix of a string is a substring that occurs at the end of the string.
+
+For example, the prefixes of the string "abcdef" are "a", "ab", "abc", "abcd", and "abcde", while the suffixes of the string "abcdef" are "f", "ef", "def", "cdef", and "bcdef".
+
+In the KMP algorithm, the prefix and suffix are used to compare the pattern to the text being searched, and to quickly skip over sections of the text that are known to not match the pattern. By identifying the common prefix and suffix of the pattern, the KMP algorithm can avoid performing unnecessary comparisons, which makes it more efficient than other string matching algorithms.
+
+The pi list (or prefix function) in the Knuth-Morris-Pratt (KMP) algorithm is a list of values that are used to efficiently skip over sections of the text that are known to not match the pattern. The value of each element in the pi list is the length of the longest prefix of the pattern that is also a suffix of the substring ending at that index in the pattern.
+
+For example, consider the pattern "abcabd". The pi list for this pattern would be [0, 0, 0, 1, 2, 0], because:
+
+The longest prefix of "abcabd" that is also a suffix of "a" is the empty string, which has length 0.
+The longest prefix of "abcabd" that is also a suffix of "ab" is the empty string, which has length 0.
+The longest prefix of "abcabd" that is also a suffix of "abc" is the empty string, which has length 0.
+The longest prefix of "abcabd" that is also a suffix of "abca" is "a", which has length 1.
+The longest prefix of "abcabd" that is also a suffix of "abcab" is "ab", which has length 2.
+The longest prefix of "abcabd" that is also a suffix of "abcabd" is the empty string, which has length 0.
+The pi list is used in the KMP algorithm to quickly skip over sections of the text that are known to not match the pattern. By using the pi list, the algorithm can avoid performing unnecessary comparisons, which makes it more efficient than other string matching algorithms.
+
+A suffix tree is a data structure that can be used to store all the suffixes of a given string. It allows for efficient searching of substrings within the string, and can be built by following these steps:
+
+Start with an empty tree and the full string as the input.
+Identify the longest prefix of the input string that matches a substring already in the tree. This prefix is called the "active edge".
+If the active edge is not a leaf node in the tree, go to the next character in the input string and repeat step 2.
+If the active edge is a leaf node, create a new edge from the parent node to the next character in the input string, and set the active edge to this new edge.
+If there is no active edge in the tree that matches the next character in the input string, create a new edge from the root node to this character, and set the active edge to this new edge.
+Repeat steps 2-5 until all the suffixes of the input string have been added to the tree.
+Once the suffix tree has been built, it can be used to quickly search for substrings within the input string.
+
 ## 2. Divide and conquer
 Divide and conquer is an algorithm design paradigm that involves dividing a problem into smaller subproblems, solving the subproblems recursively, and then combining the solutions to the subproblems to solve the original problem. This approach can be used to solve a wide variety of problems, from sorting and searching to optimization and graph algorithms.
 
