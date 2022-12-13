@@ -76,8 +76,6 @@ The greedy approach is often used to solve optimization problems, where the goal
 
 ### One of the key advantages of greedy algorithms is their simplicity. They are easy to understand and implement, and they often have good performance in practice. However, they are not always guaranteed to find the optimal solution, as they can be susceptible to "getting stuck" in locally optimal solutions that are not globally optimal.
 
-I hope this helps! Let me know if you have any other questions.
-
 ## 4. Probability algorithms 
 Monte Carlo and Las Vegas are two types of algorithms that use randomness or probability to solve computational problems. The main difference between these two types of algorithms is the certainty of their output.
 
