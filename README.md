@@ -77,3 +77,12 @@ The greedy approach is often used to solve optimization problems, where the goal
 ### One of the key advantages of greedy algorithms is their simplicity. They are easy to understand and implement, and they often have good performance in practice. However, they are not always guaranteed to find the optimal solution, as they can be susceptible to "getting stuck" in locally optimal solutions that are not globally optimal.
 
 I hope this helps! Let me know if you have any other questions.
+
+## 4. Probability algorithms 
+Monte Carlo and Las Vegas are two types of algorithms that use randomness or probability to solve computational problems. The main difference between these two types of algorithms is the certainty of their output.
+
+1. Monte Carlo algorithms use randomness to approximate solutions to problems. These algorithms generate a large number of random samples, and use these samples to estimate the desired solution. The output of a Monte Carlo algorithm is not always correct, but the error will become smaller as the number of samples increases.
+
+3. Las Vegas algorithms also use randomness to solve problems, but unlike Monte Carlo algorithms, they always return the correct answer. However, the running time of a Las Vegas algorithm is not guaranteed, and may vary depending on the input. In other words, Las Vegas algorithms have a probabilistic running time, but a deterministic output.
+
+### In summary, the main difference between Monte Carlo and Las Vegas algorithms is that Monte Carlo algorithms have a deterministic output and a probabilistic running time, while Las Vegas algorithms have a probabilistic running time and a deterministic output.
