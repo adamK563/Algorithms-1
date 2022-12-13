@@ -76,6 +76,21 @@ The greedy approach is often used to solve optimization problems, where the goal
 
 ### One of the key advantages of greedy algorithms is their simplicity. They are easy to understand and implement, and they often have good performance in practice. However, they are not always guaranteed to find the optimal solution, as they can be susceptible to "getting stuck" in locally optimal solutions that are not globally optimal.
 
+Huffman coding is a lossless data compression algorithm that assigns variable-length codes to characters in a string, such that the characters with higher frequencies are assigned shorter codes and the characters with lower frequencies are assigned longer codes. This allows for efficient storage and transmission of the string, as the codes can be used to represent the original string using fewer bits than the original representation.
+
+To encode a string using Huffman coding, follow these steps:
+
+Create a frequency table for the characters in the string, which lists the frequency of each character in the string.
+Create a binary tree for the characters in the string, where the root node is the character with the highest frequency, and the children of each node are the next two highest-frequency characters.
+Traverse the binary tree, starting from the root node, and assign a 0 to each left child and a 1 to each right child.
+Use the resulting code for each character to encode the string, by replacing each character in the string with its code.
+To decode a Huffman-encoded string, follow these steps:
+
+Create a binary tree for the codes in the encoded string, using the same process as in step 2 of the encoding process.
+Traverse the binary tree, starting from the root node, and use the sequence of 0s and 1s in the encoded string to navigate to the leaf nodes of the tree.
+For each leaf node, replace the sequence of 0s and 1s in the encoded string with the character represented by that leaf node.
+Huffman coding is an efficient and effective method for lossless data compression, and is widely used in many applications that require the storage or transmission of large amounts of data.
+
 ## 4. Probability algorithms 
 Monte Carlo and Las Vegas are two types of algorithms that use randomness or probability to solve computational problems. The main difference between these two types of algorithms is the certainty of their output.
 
